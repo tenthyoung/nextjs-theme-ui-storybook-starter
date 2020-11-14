@@ -1,0 +1,10 @@
+import { render } from "../../utils/test-utils";
+
+import { usage } from "./{{name}}.stories";
+
+describe("<{{name}} />", () => {
+  test("renders the component", () => {
+    const { asFragment } = render(usage());
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
